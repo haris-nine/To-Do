@@ -1,0 +1,199 @@
+/* styles.css */
+* {
+    box-sizing: content-box;
+}
+/* Basic styling for layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, button {
+    padding: 5px;
+    margin-top: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#project-section {
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+    margin-top: 10px;
+    height: 80svh;
+}
+
+/* Project Buttons */
+.project-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.project-button {
+    background-color: #BDC3C7; /* Light gray */
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.project-button.active {
+    background-color: #009688; /* Teal */
+    color: white;
+    font-weight: bold;
+}
+
+/* Delete Project Button */
+.delete-project-button {
+    background-color: #e74c3c; /* Red */
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Todo Items */
+.todo-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.todo-item h3 {
+    margin-top: 0;
+}
+
+/* Priority Colors */
+.priority-low {
+    border-left: 5px solid #2ecc71; /* Green */
+}
+
+.priority-medium {
+    border-left: 5px solid #f1c40f; /* Yellow */
+}
+
+.priority-high {
+    border-left: 5px solid #e74c3c; /* Red */
+}
+
+/* Delete Todo Button */
+.delete-todo, .toggle-status {
+    background-color: #e74c3c; /* Red */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.toggle-status {
+    background-color: #2980b9; /* Blue */
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Add to styles.css */
+.todo-item.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Basic styling for the modal */
+.modal {
+    display: none;
+}
+
+.modal header {
+    position: relative;
+    text-align: center;
+}
+
+.modal header button {
+    position: absolute;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    right: -60px;
+    top: -70px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    transition: 300ms;
+}
+
+.modal header button:hover {
+    background-color: #BDC3C7;
+    color: black;
+}
+
+.modal[aria-hidden="false"] {
+    display: block;
+}
+
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__container {
+    background: #fff;
+    padding: 1em;
+    width: 500px;
+    border-radius: 8px;
+    position: relative;
+    display: grid;
+}
+
+#todo-form {
+    display: grid;
+    justify-content: center;
+}
+
+button {
+    max-width: 200px;
+}
+
+input, select, .modal button {
+    max-width: 300px;
+}
+
+#adder {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 400px auto;
+}
+
+
+

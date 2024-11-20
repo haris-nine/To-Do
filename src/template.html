@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <h1>To-Do App</h1>
+    <button id="open-modal-1" data-micromodal-trigger="modal-1">Create New To-do</button>
+    <div id="adder">
+        <section id="project-section">
+            <h2>Projects</h2>
+            <div id="project-container"></div>
+        </section>
+        <section id="todo-display">
+            <h2>Your Todos</h2>
+            <!-- This is where todos will be displayed -->
+        </section>
+    </div>
+
+
+
+
+    <div id="modal-1" class="modal" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <header>
+                    <h2 id="modal-1-title">Add a To-Do</h2>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close>X</button>
+                </header>
+                <div id="modal-1-content">
+            <section id="todo-form">
+                    <form id="To-Do">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" placeholder="What is the task?" required>
+            
+                        <label for="description">Description:</label>
+                        <input type="text" id="description" name="description" placeholder="Describe it." required>
+            
+                        <label for="dueDate">Due Date:</label>
+                        <input type="date" id="dueDate" name="dueDate" required>
+            
+                        <label for="priority">Priority:</label>
+                        <select id="priority" name="priority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+            
+                        <label for="status">Status:</label>
+                        <select id="status" name="status">
+                            <option value="pending">Pending</option>
+                            <option value="done">Done</option>
+                        </select>
+            
+                        <label for="project">Project:</label>
+                        <select id="project" name="project">
+                            <!-- Projects will be populated dynamically -->
+                        </select>
+            
+                        <button type="submit">Add To-Do</button>
+                    </form>
+            
+                    <form id="projectCreator">
+                        <label for="new-project">Create New Project:</label>
+                        <input type="text" id="new-project" name="new-project" placeholder="Enter new project name">
+                        <button type="button" id="create-project">Create Project</button>
+                    </form>
+            </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
